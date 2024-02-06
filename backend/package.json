@@ -7,7 +7,8 @@
     "dev": "ts-node  server.ts",
     "start": "ts-node-dev --files server.ts",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "build": "tsc"
   },
   "author": "JOY",
   "license": "ISC",
