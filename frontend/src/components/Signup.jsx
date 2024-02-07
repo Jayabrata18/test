@@ -27,7 +27,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/registration",
+        "https://backend-server-jy9f.onrender.com/api/v1/registration",
         formData
       );
 
