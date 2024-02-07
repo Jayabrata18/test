@@ -34,8 +34,8 @@ const speedLimiter = (0, express_slow_down_1.default)({
     delayMs: () => 500, // begin adding 500ms of delay per request above 100
     maxDelayMs: 2000,
 });
-exports.app.use(limiter);
-exports.app.use(speedLimiter);
+// app.use(limiter);
+// app.use(speedLimiter);
 //routes
 exports.app.use("/api/v1", userRoutes_1.default);
 exports.app.use("/api/v1", noteRoutes_1.default);
