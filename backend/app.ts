@@ -34,8 +34,8 @@ const speedLimiter = slowDown({
   maxDelayMs: 2000,
 });
 
-app.use(limiter);
-app.use(speedLimiter);
+// app.use(limiter);
+// app.use(speedLimiter);
 
 //routes
 app.use("/api/v1", userRouter);
