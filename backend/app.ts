@@ -17,7 +17,7 @@ app.use(
   cors({
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    credentials: false,
   })
 );
 // Rate limiting middleware

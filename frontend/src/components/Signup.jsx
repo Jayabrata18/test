@@ -30,7 +30,7 @@ const Signup = () => {
         "https://backend-server-jy9f.onrender.com/api/v1/registration",
         formData,
         {
-          withCredentials: true  // Include this option to send credentials
+          withCredentials: false  // Include this option to send credentials
         }
       );
 
