@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import Signin from "./Signin";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Signup = () => {
-  // const navigate = useNavigate();
+  const history = useHistory();
   const [formData, setFormData] = useState({
     email: "",
     name: "",
@@ -39,7 +39,7 @@ const Signup = () => {
         toast.success(message);
         // Redirect to sign-in page after successful signup
         setTimeout(() => {
-          window.location.href = "/signin";
+          history.push("/signin")
         }, 2000); // Redirect after 2 seconds
       } else {
         toast.error(message);
