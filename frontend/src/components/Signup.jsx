@@ -6,7 +6,8 @@ import { useNavigate, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Signup = () => {
-  const history = useHistory();
+  // const history = useHistory();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     name: "",
@@ -39,7 +40,7 @@ const Signup = () => {
         toast.success(message);
         // Redirect to sign-in page after successful signup
         setTimeout(() => {
-          history.push("/signin")
+          navigate("/signin")
         }, 2000); // Redirect after 2 seconds
       } else {
         toast.error(message);
