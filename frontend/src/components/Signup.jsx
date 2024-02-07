@@ -28,7 +28,10 @@ const Signup = () => {
     try {
       const response = await axios.post(
         "https://backend-server-jy9f.onrender.com/api/v1/registration",
-        formData
+        formData,
+        {
+          withCredentials: true  // Include this option to send credentials
+        }
       );
 
       const { success, message } = response.data;
@@ -46,8 +49,8 @@ const Signup = () => {
       toast.error("An error occurred. Please try again.");
     }
   };
- 
-     
+
+
 
 
   return (
@@ -82,7 +85,7 @@ const Signup = () => {
             value={formData.email}
           />
 
-          
+
           <label htmlFor="username">UserName:</label>
           <input
             onChange={changeHandler}
@@ -108,13 +111,13 @@ const Signup = () => {
             id="confirmPassword"
             value={formData.confirmPassword}
           />
-            {/* {!passwordsMatch && <p>Passwords do not match!</p>} */}
+          {/* {!passwordsMatch && <p>Passwords do not match!</p>} */}
           <label htmlFor="profileImage">Profile Image:</label>
           <input
             type="file"
             name="profileImage"
             id="profileImage"
-            // onChange={imageChangeHandler}
+          // onChange={imageChangeHandler}
           />
           <div className="flex justify-center p-4">
             <button className="w-full" onClick={handleSubmit}>
